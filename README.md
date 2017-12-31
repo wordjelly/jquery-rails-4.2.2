@@ -1,5 +1,23 @@
 # jquery-rails
 
+This gem has been modified in the jquery-ujs.js file, so that the rails.submit callback accepts extra_params.
+This is because usually in jquery, when we trigger a event, we can pass extra params as a second argument. However ujs does not automatically provide for that situation, and hence any additional arguments passed to jquery.trigger calls are lost in the ujs handlers.
+eg:
+
+```
+$("#myform").trigger("submit",{"hello" : "world"});
+//this submit is picked up normally by the ujs rails.submit handler, but the second argument the hash {} is not passed
+//forwards
+//this gem is modified so that the second argument is passed forwards as well.
+```
+
+So currently the extra arguments are available in 
+rails.submit -> handleRemote -> ajax : Before.
+
+just follow the function rails.submit, to see where the "extra_parameters" argument is passed forwards.
+
+
+
 jQuery! For Rails! So great.
 
 This gem provides:
