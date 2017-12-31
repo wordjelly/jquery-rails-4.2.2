@@ -2,11 +2,11 @@
 require File.expand_path('../lib/jquery/rails/version', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name        = "jquery-rails"
-  s.version     = Jquery::Rails::VERSION
+  s.name        = "wj-jquery-rails"
+  s.version     = '4.2.2.1'
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["André Arko"]
-  s.email       = ["andre@arko.net"]
+  s.authors     = ["André Arko","wordjelly"]
+  s.email       = ["bhargav.r.raut@gmail.com"]
   s.homepage    = "https://github.com/rails/jquery-rails"
   s.summary     = "Use jQuery with Rails 4+"
   s.description = "This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application."
